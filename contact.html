@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تواصل معنا - أكاديمية البرمجة والذكاء الاصطناعي</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         * {
             font-family: 'Cairo', sans-serif;
         }
-        
+
         :root {
             --primary-blue: #2563eb;
             --light-blue: #3b82f6;
@@ -25,26 +27,26 @@
             --text-light: #64748b;
             --shadow-color: rgba(0, 0, 0, 0.08);
         }
-        
+
         body {
             background-color: #f8fafc;
             color: var(--text-dark);
         }
-        
+
         /* ========== NAVBAR ========== */
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--ai-purple) 100%);
             box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
             padding: 1rem 0;
         }
-        
+
         .navbar-brand {
             font-weight: 900;
             font-size: 1.5rem;
             color: white !important;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .navbar-nav .nav-link {
             color: rgba(255, 255, 255, 0.9) !important;
             font-weight: 600;
@@ -53,18 +55,18 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .navbar-nav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
         }
-        
+
         .navbar-nav .nav-link.active {
             background-color: rgba(255, 255, 255, 0.2);
             color: white !important;
             box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
         }
-        
+
         .user-btn {
             background: rgba(255, 255, 255, 0.15);
             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -74,13 +76,13 @@
             font-weight: 700;
             transition: all 0.3s ease;
         }
-        
+
         .user-btn:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
         }
-        
+
         /* ========== HERO SECTION ========== */
         .contact-hero {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--ai-purple) 100%);
@@ -90,7 +92,7 @@
             overflow: hidden;
             clip-path: ellipse(150% 100% at 50% 0%);
         }
-        
+
         .contact-hero::before {
             content: '';
             position: absolute;
@@ -102,7 +104,7 @@
             background-size: cover;
             background-position: center;
         }
-        
+
         .page-title {
             font-size: 3.5rem;
             font-weight: 900;
@@ -110,12 +112,12 @@
             line-height: 1.2;
             margin-bottom: 1rem;
         }
-        
+
         /* ========== CONTACT SECTION ========== */
         .contact-section {
             padding: 5rem 0;
         }
-        
+
         .contact-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -125,11 +127,11 @@
             height: 100%;
             transition: transform 0.3s ease;
         }
-        
+
         .contact-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .contact-icon {
             width: 70px;
             height: 70px;
@@ -141,42 +143,42 @@
             color: white;
             margin-bottom: 1.5rem;
         }
-        
+
         .email-icon {
             background: linear-gradient(135deg, #dc2626, #ef4444);
         }
-        
+
         .phone-icon {
             background: linear-gradient(135deg, var(--success-green), #34d399);
         }
-        
+
         .location-icon {
             background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
         }
-        
+
         .hours-icon {
             background: linear-gradient(135deg, var(--ai-purple), var(--light-purple));
         }
-        
+
         .contact-title {
             font-size: 1.5rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             color: var(--text-dark);
         }
-        
+
         .contact-info {
             color: var(--text-light);
             font-size: 1.1rem;
             line-height: 1.6;
         }
-        
+
         /* ========== CONTACT FORM ========== */
         .form-section {
             padding: 3rem 0 5rem;
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
         }
-        
+
         .form-container {
             background: var(--card-bg);
             border-radius: 25px;
@@ -184,7 +186,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         .form-title {
             font-size: 2.2rem;
             font-weight: 900;
@@ -194,20 +196,20 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         .form-subtitle {
             color: var(--text-light);
             font-size: 1.1rem;
             margin-bottom: 2.5rem;
         }
-        
+
         .form-label {
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 0.5rem;
             display: block;
         }
-        
+
         .form-control {
             border: 2px solid #e2e8f0;
             border-radius: 12px;
@@ -216,13 +218,13 @@
             transition: all 0.3s ease;
             background-color: white;
         }
-        
+
         .form-control:focus {
             border-color: var(--primary-blue);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
             background-color: white;
         }
-        
+
         .form-select {
             border: 2px solid #e2e8f0;
             border-radius: 12px;
@@ -231,17 +233,17 @@
             transition: all 0.3s ease;
             background-color: white;
         }
-        
+
         .form-select:focus {
             border-color: var(--primary-blue);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
-        
+
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         .submit-btn {
             background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
             color: white;
@@ -255,18 +257,18 @@
             width: 100%;
             margin-top: 1rem;
         }
-        
+
         .submit-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
             color: white;
         }
-        
+
         /* ========== FAQ SECTION ========== */
         .faq-section {
             padding: 5rem 0;
         }
-        
+
         .faq-title {
             font-size: 2.5rem;
             font-weight: 900;
@@ -277,7 +279,7 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         .faq-item {
             background: var(--card-bg);
             border-radius: 15px;
@@ -286,12 +288,12 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .faq-item:hover {
             border-color: var(--primary-blue);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
-        
+
         .faq-question {
             padding: 1.5rem;
             font-weight: 700;
@@ -303,37 +305,37 @@
             align-items: center;
             transition: all 0.3s ease;
         }
-        
+
         .faq-question:hover {
             background-color: #f8fafc;
         }
-        
+
         .faq-answer {
             padding: 0 1.5rem 1.5rem;
             color: var(--text-light);
             line-height: 1.7;
             display: none;
         }
-        
+
         .faq-icon {
             color: var(--primary-blue);
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
-        
+
         .faq-item.active .faq-icon {
             transform: rotate(180deg);
         }
-        
+
         .faq-item.active .faq-answer {
             display: block;
         }
-        
+
         /* ========== MAP SECTION ========== */
         .map-section {
             padding: 0 0 5rem;
         }
-        
+
         .map-container {
             border-radius: 20px;
             overflow: hidden;
@@ -346,26 +348,26 @@
             justify-content: center;
             position: relative;
         }
-        
+
         .map-placeholder {
             text-align: center;
             color: var(--text-light);
         }
-        
+
         .map-icon {
             font-size: 4rem;
             color: var(--primary-blue);
             margin-bottom: 1rem;
             opacity: 0.5;
         }
-        
+
         /* ========== FOOTER ========== */
         footer {
             background: var(--dark-bg);
             color: white;
             padding: 4rem 0 2rem;
         }
-        
+
         .footer-logo {
             font-size: 1.5rem;
             font-weight: 900;
@@ -375,7 +377,7 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         .footer-links h5 {
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -383,7 +385,7 @@
             position: relative;
             padding-bottom: 0.75rem;
         }
-        
+
         .footer-links h5::after {
             content: '';
             position: absolute;
@@ -394,16 +396,16 @@
             background: var(--primary-blue);
             border-radius: 2px;
         }
-        
+
         .footer-links ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .footer-links li {
             margin-bottom: 0.75rem;
         }
-        
+
         .footer-links a {
             color: #cbd5e1;
             text-decoration: none;
@@ -412,12 +414,12 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .footer-links a:hover {
             color: white;
             transform: translateX(-5px);
         }
-        
+
         .footer-contact p {
             color: #cbd5e1;
             margin-bottom: 1rem;
@@ -425,13 +427,13 @@
             align-items: center;
             gap: 0.75rem;
         }
-        
+
         .social-icons {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .social-icons a {
             width: 45px;
             height: 45px;
@@ -445,13 +447,13 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .social-icons a:hover {
             background: var(--primary-blue);
             transform: translateY(-5px);
             border-color: transparent;
         }
-        
+
         .footer-bottom {
             margin-top: 3rem;
             padding-top: 2rem;
@@ -459,30 +461,94 @@
             text-align: center;
             color: #94a3b8;
         }
-        
+
         /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991px) {
             .page-title {
                 font-size: 2.5rem;
             }
-            
+
             .form-container {
                 padding: 2rem;
             }
-            
+
             .contact-card {
                 padding: 2rem;
             }
-            
-            .navbar-nav {
-                background: rgba(255, 255, 255, 0.1);
+
+            .navbar-collapse {
+                background: rgba(15, 23, 42, 0.95);
                 backdrop-filter: blur(10px);
-                padding: 1rem;
+                padding: 1.5rem;
                 border-radius: 15px;
                 margin-top: 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-nav .nav-link {
+                padding: 0.75rem 1rem;
+                background: rgba(255, 255, 255, 0.05);
+                margin-bottom: 0.5rem;
+            }
+
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link.active {
+                background: var(--primary-blue);
+                transform: translateX(-5px);
+            }
+
+            .navbar-nav {
+                margin-bottom: 1rem;
+            }
+
+            footer {
+                text-align: center;
+            }
+
+            .footer-links h5::after {
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
+            }
+
+            .footer-links a {
+                justify-content: center;
+            }
+
+            .footer-contact p {
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            /* Stack buttons nicely on mobile */
+            .d-flex.gap-2 {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .user-btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
             }
         }
-        
+
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+        }
+
         /* ========== SUCCESS MESSAGE ========== */
         .success-message {
             display: none;
@@ -494,12 +560,13 @@
             text-align: center;
             animation: slideIn 0.5s ease;
         }
-        
+
         @keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -507,12 +574,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-laptop me-2"></i>أكاديمية البرمجة والذكاء الاصطناعي
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpZtaiOubQf-eF-HGaG5lM5CwYDwt43lNpg&s"
+                    alt="Academy Logo" class="navbar-logo rounded-circle">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -528,19 +597,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">الامتحانات</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="whyus.html">لماذا نحن </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">تواصل معنا</a>
                     </li>
-                    
+
                 </ul>
                 <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
-                    <a href="../login/login.html" class="user-btn text-nowrap">
+                    <a href="login/login.html" class="user-btn text-nowrap">
                         <i class="bi bi-person-circle me-1"></i>تسجيل الدخول
                     </a>
-                    <a href="../register/register.html" class="user-btn text-nowrap">
+                    <a href="register/register.html" class="user-btn text-nowrap">
                         <i class="bi bi-person-circle me-1"></i>انشاء حساب
                     </a>
                 </div>
@@ -578,7 +647,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-card">
                         <div class="contact-icon phone-icon">
@@ -594,7 +663,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-card">
                         <div class="contact-icon location-icon">
@@ -610,7 +679,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-card">
                         <div class="contact-icon hours-icon">
@@ -621,7 +690,8 @@
                             الأحد - الخميس: 9 ص - 5 م<br>
                             الجمعة - السبت: مغلق
                         </p>
-                        <button class="btn btn-outline-purple mt-3" style="border-color: var(--ai-purple); color: var(--ai-purple);">
+                        <button class="btn btn-outline-purple mt-3"
+                            style="border-color: var(--ai-purple); color: var(--ai-purple);">
                             معرفة المزيد <i class="bi bi-info-circle ms-1"></i>
                         </button>
                     </div>
@@ -638,24 +708,24 @@
                     <div class="form-container">
                         <h2 class="form-title">أرسل رسالتك إلينا</h2>
                         <p class="form-subtitle">سنرد عليك في غضون 24 ساعة عمل</p>
-                        
+
                         <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label">الاسم الكامل *</label>
                                     <input type="text" class="form-control" placeholder="أدخل اسمك الكامل" required>
                                 </div>
-                                
+
                                 <div class="col-md-6">
                                     <label class="form-label">البريد الإلكتروني *</label>
                                     <input type="email" class="form-control" placeholder="example@email.com" required>
                                 </div>
-                                
+
                                 <div class="col-md-6">
                                     <label class="form-label">رقم الهاتف</label>
                                     <input type="tel" class="form-control" placeholder="01012345678">
                                 </div>
-                                
+
                                 <div class="col-md-6">
                                     <label class="form-label">نوع الاستفسار *</label>
                                     <select class="form-select" required>
@@ -667,17 +737,18 @@
                                         <option value="other">استفسار آخر</option>
                                     </select>
                                 </div>
-                                
+
                                 <div class="col-12">
                                     <label class="form-label">الموضوع *</label>
                                     <input type="text" class="form-control" placeholder="موضوع الرسالة" required>
                                 </div>
-                                
+
                                 <div class="col-12">
                                     <label class="form-label">الرسالة *</label>
-                                    <textarea class="form-control" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+                                    <textarea class="form-control" placeholder="اكتب رسالتك هنا..." rows="5"
+                                        required></textarea>
                                 </div>
-                                
+
                                 <div class="col-12">
                                     <div class="form-check mb-3">
                                         <input class="form-check-input" type="checkbox" id="newsletter" checked>
@@ -686,7 +757,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-12">
                                     <button type="submit" class="submit-btn">
                                         <i class="bi bi-send-fill me-2"></i>إرسال الرسالة
@@ -694,7 +765,7 @@
                                 </div>
                             </div>
                         </form>
-                        
+
                         <div id="successMessage" class="success-message">
                             <i class="bi bi-check-circle-fill fs-3 mb-2"></i>
                             <h4 class="mb-2">تم إرسال رسالتك بنجاح!</h4>
@@ -710,7 +781,7 @@
     <section class="faq-section">
         <div class="container">
             <h2 class="faq-title">الأسئلة الشائعة</h2>
-            
+
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="faq-item">
@@ -719,46 +790,48 @@
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>يمكنك الاشتراك من خلال زيارة صفحة الكورسات واختيار التيرم المناسب لك، ثم الضغط على زر "الاشتراك" واتباع خطوات الدفع الإلكتروني.</p>
+                            <p>يمكنك الاشتراك من خلال زيارة صفحة الكورسات واختيار التيرم المناسب لك، ثم الضغط على زر
+                                "الاشتراك" واتباع خطوات الدفع الإلكتروني.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>هل يمكنني الوصول للمحتوى على الهاتف المحمول؟</span>
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>نعم، المنصة متوافقة تماماً مع جميع الأجهزة بما فيها الهواتف المحمولة والأجهزة اللوحية، يمكنك الدراسة من أي مكان وفي أي وقت.</p>
+                            <p>نعم، المنصة متوافقة تماماً مع جميع الأجهزة بما فيها الهواتف المحمولة والأجهزة اللوحية،
+                                يمكنك الدراسة من أي مكان وفي أي وقت.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>ماذا أفعل إذا واجهت مشكلة تقنية؟</span>
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>يمكنك التواصل مع فريق الدعم الفني عبر البريد الإلكتروني support@ai-academy.edu أو من خلال نموذج الاتصال أعلاه، وسيتم الرد عليك خلال 24 ساعة عمل.</p>
+                            <p>يمكنك التواصل مع فريق الدعم الفني عبر البريد الإلكتروني support@ai-academy.edu أو من خلال
+                                نموذج الاتصال أعلاه، وسيتم الرد عليك خلال 24 ساعة عمل.</p>
                         </div>
                     </div>
-                    
-                   
+
+
                 </div>
             </div>
         </div>
     </section>
 
-   
+
 
     <!-- ========== FOOTER ========== -->
-   <footer>
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h3 class="footer-logo">
-                        <i class="bi bi-laptop me-2"></i>أكاديمية البرمجة والذكاء الاصطناعي
-                    </h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpZtaiOubQf-eF-HGaG5lM5CwYDwt43lNpg&s"
+                        alt="Academy Logo" class="footer-logo-img">
                     <p class="text-light mb-4">
                         منصة تعليمية متخصصة في تدريس البرمجة والذكاء الاصطناعي لطلاب الصف الثاني الثانوي، نساعدك لإتقان
                         مهارات المستقبل.
@@ -806,9 +879,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // تأثيرات الشريط العلوي عند التمرير
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const navbar = document.querySelector('.navbar');
                 if (window.scrollY > 50) {
                     navbar.style.background = 'rgba(15, 23, 42, 0.95)';
@@ -818,14 +891,14 @@
                     navbar.style.backdropFilter = 'none';
                 }
             });
-            
+
             // إدارة FAQ Accordion
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
+                question.addEventListener('click', function () {
                     const faqItem = this.parentElement;
                     faqItem.classList.toggle('active');
-                    
+
                     // إغلاق الباقي
                     faqQuestions.forEach(otherQuestion => {
                         if (otherQuestion !== this) {
@@ -834,46 +907,46 @@
                     });
                 });
             });
-            
+
             // إدارة نموذج الاتصال
             const contactForm = document.getElementById('contactForm');
             const successMessage = document.getElementById('successMessage');
-            
-            contactForm.addEventListener('submit', function(e) {
+
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // محاكاة إرسال النموذج
                 const submitBtn = contactForm.querySelector('.submit-btn');
                 const originalText = submitBtn.innerHTML;
-                
+
                 submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>جاري الإرسال...';
                 submitBtn.disabled = true;
-                
+
                 setTimeout(() => {
                     // إظهار رسالة النجاح
                     successMessage.style.display = 'block';
                     contactForm.reset();
-                    
+
                     // إعادة الزر لحالته الأصلية
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
-                    
+
                     // إخفاء رسالة النجاح بعد 5 ثوان
                     setTimeout(() => {
                         successMessage.style.display = 'none';
                     }, 5000);
-                    
+
                     // التمرير لأسفل لرؤية رسالة النجاح
                     successMessage.scrollIntoView({ behavior: 'smooth' });
                 }, 1500);
             });
-            
+
             // تأثيرات للبطاقات عند التمرير
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -882,7 +955,7 @@
                     }
                 });
             }, observerOptions);
-            
+
             // مراقبة العناصر لإضافة تأثيرات الظهور
             const elementsToAnimate = document.querySelectorAll('.contact-card, .form-container, .faq-item, .map-container');
             elementsToAnimate.forEach(el => {
@@ -892,15 +965,15 @@
                 observer.observe(el);
             });
         });
-        
+
         function showMap() {
             // في التطبيق الحقيقي، يمكن إضافة خريطة جوجل هنا
             // للمثال، سنفتح رابط خرائط جوجل
             window.open('https://www.google.com/maps?q=القاهرة+شارع+التحرير', '_blank');
         }
-        
+
         // إضافة لون البنفسجي للزر
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const style = document.createElement('style');
             style.textContent = `
                 .btn-outline-purple:hover {
@@ -913,4 +986,5 @@
         });
     </script>
 </body>
+
 </html>

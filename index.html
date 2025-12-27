@@ -677,7 +677,7 @@
         }
 
         /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -690,12 +690,89 @@
                 font-size: 2.5rem;
             }
 
-            .navbar-nav {
-                background: rgba(255, 255, 255, 0.1);
+            .navbar-collapse {
+                background: rgba(15, 23, 42, 0.95);
                 backdrop-filter: blur(10px);
-                padding: 1rem;
+                padding: 1.5rem;
                 border-radius: 15px;
                 margin-top: 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-nav .nav-link {
+                padding: 0.75rem 1rem;
+                background: rgba(255, 255, 255, 0.05);
+                margin-bottom: 0.5rem;
+            }
+
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link.active {
+                background: var(--primary-blue);
+                transform: translateX(-5px);
+            }
+
+            .navbar-nav {
+                margin-bottom: 1rem;
+            }
+
+            footer {
+                text-align: center;
+            }
+
+            .footer-links h5::after {
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
+            }
+
+            .footer-links a {
+                justify-content: center;
+            }
+
+            .footer-contact p {
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            /* Stack buttons nicely on mobile */
+            .d-flex.gap-2 {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .user-btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .hero-logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+            border-radius: 50%;
+        }
+
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .hero-logo {
+                max-width: 180px;
             }
         }
     </style>
@@ -706,7 +783,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-laptop me-2"></i>أكاديمية البرمجة والذكاء الاصطناعي
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpZtaiOubQf-eF-HGaG5lM5CwYDwt43lNpg&s"
+                    alt="Academy Logo" class="navbar-logo rounded-circle">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -722,19 +800,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">الامتحانات</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="whyus.html">لماذا نحن </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">تواصل معنا</a>
                     </li>
-                    
+
                 </ul>
                 <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
-                    <a href="../login/login.html" class="user-btn text-nowrap">
+                    <a href="login/login.html" class="user-btn text-nowrap">
                         <i class="bi bi-person-circle me-1"></i>تسجيل الدخول
                     </a>
-                    <a href="../register/register.html" class="user-btn text-nowrap">
+                    <a href="register/register.html" class="user-btn text-nowrap">
                         <i class="bi bi-person-circle me-1"></i>انشاء حساب
                     </a>
                 </div>
@@ -748,7 +826,10 @@
             <div class="grade-badge">
                 <i class="bi bi-award me-2"></i>الصف الثاني الثانوي
             </div>
-            <h1 class="hero-title mb-4">أكاديمية البرمجة والذكاء الاصطناعي</h1>
+            <div class="mb-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpZtaiOubQf-eF-HGaG5lM5CwYDwt43lNpg&s"
+                    alt="Academy Logo" class="hero-logo">
+            </div>
             <p class="lead mb-5 mx-auto" style="max-width: 700px; font-size: 1.25rem;">
                 رحلتك نحو إتقان لغات المستقبل تبدأ من هنا! تعلم البرمجة والذكاء الاصطناعي بشرح مبسط، فيديوهات تفاعلية،
                 امتحانات تقييمية، وملخصات شاملة لكل تيرم.
@@ -1150,9 +1231,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h3 class="footer-logo">
-                        <i class="bi bi-laptop me-2"></i>أكاديمية البرمجة والذكاء الاصطناعي
-                    </h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpZtaiOubQf-eF-HGaG5lM5CwYDwt43lNpg&s"
+                        alt="Academy Logo" class="footer-logo-img">
                     <p class="text-light mb-4">
                         منصة تعليمية متخصصة في تدريس البرمجة والذكاء الاصطناعي لطلاب الصف الثاني الثانوي، نساعدك لإتقان
                         مهارات المستقبل.
