@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const data = {
                     success: true,
                     message: 'تم تسجيل الدخول بنجاح! (نسخة تجريبية)',
-                    redirect: '../dashboard/home.html' // Changed to direct to home.html as it exists
+                    redirect: '../index.html'
                 };
 
                 // Simulate network delay
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // إعادة التوجيه بعد تأخير
                     setTimeout(() => {
-                        window.location.href = data.redirect || '../dashboard/home.html';
+                        window.location.href = data.redirect || '../index.html';
                     }, 1500);
                 } else {
                     showGeneralError(data.message || 'خطأ في تسجيل الدخول');
