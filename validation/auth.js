@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Mock login success
                 const data = {
                     success: true,
-                    message: 'تم تسجيل الدخول بنجاح! (نسخة تجريبية)',
+                    message: 'تم تسجيل الدخول بنجاح! ',
                     redirect: '../index.html'
                 };
 
